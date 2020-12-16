@@ -1,5 +1,7 @@
 package com.greenfoxacademy;
 
+import java.io.IOException;
+
 public class ArgHandler {
     private TodoApp app;
 
@@ -7,7 +9,7 @@ public class ArgHandler {
         this.app = app;
     }
 
-    void parse(String[] args) {
+    void parse(String[] args) throws IOException {
         if (args.length == 0) {
             System.out.println(
                     "Parancssori Todo applikáció \n" +
@@ -20,6 +22,8 @@ public class ArgHandler {
             );
         } else if (args.length == 1 && args[0].equals("-l")) {
             app.list();
+        } else if (args.length == 2 && args[0].equals("-a")) {
+            app.addNew(args[1]);
         }
 
     }

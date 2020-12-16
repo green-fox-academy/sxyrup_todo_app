@@ -18,6 +18,6 @@ public class Todo implements Serializable {
 
     @Override
     public String toString() {
-        return id + ". " + (isDone ? " [X] " : " [ ] ") + description;
+        return (isDone ? " [X] " : " [ ] ") + description;
     }
 }

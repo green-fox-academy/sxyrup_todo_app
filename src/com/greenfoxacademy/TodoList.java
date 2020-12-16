@@ -2,7 +2,7 @@ package com.greenfoxacademy;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 public class TodoList {
     private List<Todo> todos;
@@ -22,6 +22,10 @@ public class TodoList {
 
     @Override
     public String toString() {
-        return todos.stream().map(Todo::toString).collect(Collectors.joining("\n"));
+        String t = "";
+        for (int i = 0; i < todos.size(); i++) {
+            t += (i + 1) + ". " + todos.get(i) + "\n";
+        }
+        return t;
     }
 }
