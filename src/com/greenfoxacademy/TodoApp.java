@@ -18,10 +18,10 @@ public class TodoApp {
 
 
     void list() {
-        System.out.println(list);
+        System.out.println(list.count() == 0 ? "Nincs mara teni valod :(" : list);
     }
 
-    void addNew(String description) throws IOException {
+    void addNew(String description) throws IOException { //function OK!!!!!!!!!!!!
         list.addNew(description);
         Files.write(Paths.get(FILE_PATH), Collections.singleton(list.toString()), StandardOpenOption.CREATE, StandardOpenOption.WRITE, StandardOpenOption.APPEND);
     }

@@ -3,7 +3,7 @@ package com.greenfoxacademy;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//Todo implements iterable, iterator method?
 public class TodoList {
     private List<Todo> todos;
 
@@ -18,6 +18,9 @@ public class TodoList {
 
     void addNew(String description) {
         todos.add(new Todo(description));
+    }
+    int count(){
+        return todos.size();
     }
 
     @Override
