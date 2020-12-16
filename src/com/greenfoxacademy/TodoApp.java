@@ -1,13 +1,14 @@
 package com.greenfoxacademy;
 
 public class TodoApp {
+    private TodoList list;
 
-
-    public static void main(String[] args) {
-        ArgHandler.parse(args);
+    public TodoApp() {
+        this.list = new TodoList();
+        list.addNew("BUY MILK");
     }
 
     void list() {
-
+        System.out.println(list);
     }
 }
