@@ -20,8 +20,7 @@ public class TodoApp {
   }
 
   void list() {
-    System.out
-        .println(list.count() == 0 ? "Nincs mara teni valod :(" : list); //Todo SAME FOR COMPLETED?!
+    System.out.println(list.count() == 0 ? "Nincs mara teni valod :(" : list); //Todo SAME FOR COMPLETED?!
   }
 
   void addNew(String description) throws IOException { //FUNCTION OK
