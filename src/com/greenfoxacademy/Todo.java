@@ -15,6 +15,10 @@ public class Todo implements Serializable {
     this.isDone = true;
   }
 
+  public boolean isDone() {
+    return isDone;
+  }
+
   @Override
   public String toString() {
     return (isDone ? " [X] " : " [ ] ") + DESCRIPTION;

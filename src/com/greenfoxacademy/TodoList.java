@@ -32,6 +32,16 @@ public class TodoList implements Serializable { // implements SERIALIZABLE
     return todos.size();
   }
 
+  int countCompleted() {
+    int completed = 0;
+    for (Todo todo : todos) {
+      if (todo.isDone()) {
+        completed++;
+      }
+    }
+    return completed;
+  }
+
   @Override
   public String toString() {
     String t = "";
