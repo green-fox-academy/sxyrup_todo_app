@@ -28,6 +28,9 @@ public class ArgHandler {
       app.remove(Integer.parseInt(args[1]));
     } else if (args.length == 2 && args[0].equals("-c")) {
       app.complete(Integer.parseInt(args[1]));
+    } else {
+      System.out.println("Nem tamogatott argumentum!");
+      System.out.println(MAN);
     }
 
   }
