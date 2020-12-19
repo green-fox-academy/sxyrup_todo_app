@@ -39,7 +39,7 @@ public class ArgHandler {
         app.complete(Integer.parseInt(args[1]));
       }
     } else {
-      System.out.println("Nem tamogatott argumentum!");
+      System.out.println("Nem tamogatott argumentum!\n");
       System.out.println(MAN);
     }
   }
