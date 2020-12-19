@@ -20,7 +20,7 @@ public class TodoApp {
   }
 
   void list() {
-    System.out.println(list.count() == 0 || list.countCompleted() == list.count()? "Nincs mara teni valod :(" : list); //for empty or completed list
+    System.out.println(list.count() == 0 || list.countCompleted() == list.count()? "Nincs mára tennivalód! :)" : list); //for empty or completed list
 
   }
 
