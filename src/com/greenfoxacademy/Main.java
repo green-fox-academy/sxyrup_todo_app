@@ -14,5 +14,11 @@ public class Main {
     } catch (IOException e) {
       e.printStackTrace();
     }
+    catch (NumberFormatException n) {
+      System.out.println("");
+    }
+    catch (IndexOutOfBoundsException e) {
+      System.out.println("Nem lehetseges a feladat vegrehajtasa, Tulindexelesi problema adodott!");
+    }
   }
 }
