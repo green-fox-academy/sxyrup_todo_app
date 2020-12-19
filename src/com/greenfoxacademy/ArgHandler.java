@@ -20,18 +20,27 @@ public class ArgHandler {
   void parse(String[] args) throws IOException {
     if (args.length == 0) {
       System.out.println(MAN);
-    } else if (args.length == 1 && args[0].equals("-l")) {
-      app.list();
-    } else if (args.length == 2 && args[0].equals("-a")) {
-      app.addNew(args[1]);
-    } else if (args.length == 2 && args[0].equals("-r")) {
-      app.remove(Integer.parseInt(args[1]));
-    } else if (args.length == 2 && args[0].equals("-c")) {
-      app.complete(Integer.parseInt(args[1]));
+    } else if (args.length == 1) {
+      if (args[0].equals("-l")) {
+        app.list();
+      } else if (args[0].equals("-c")) {
+        System.out.println("Nem lehetséges a feladat végrehajtása: nem adtál meg indexet!");
+      } else if (args[0].equals("-r")) {
+        System.out.println("Nem lehetséges a feladat végrehajtása: nem adtál meg indexet!");
+      } else if (args[0].equals("-a")) {
+        System.out.println("Nem lehetséges új feladat hozzáadása: nincs megadva a feladat!");
+      }
+    } else if (args.length == 2) {
+      if (args[0].equals("-a")) {
+        app.addNew(args[1]);
+      } else if (args[0].equals("-r")) {
+        app.remove(Integer.parseInt(args[1]));
+      } else if (args[0].equals("-c")) {
+        app.complete(Integer.parseInt(args[1]));
+      }
     } else {
       System.out.println("Nem tamogatott argumentum!");
       System.out.println(MAN);
     }
-
   }
 }
